@@ -6,7 +6,7 @@ typedef struct Node{
 	struct Node *next;
 }Node;
 typedef struct Node *linklist;
-linklist init_create()//创建一个链表 
+linklist init_create()
 {
 	linklist L;
 	L=(linklist)malloc(sizeof(Node));
@@ -29,7 +29,7 @@ int insert_list(linklist L,int num,int place)
 		return 0;
 	}
 	else{
-		pnew=(linklist)malloc(sizeof(Node));//从这里可知L第一个位置未插入数据，数据为空。
+		pnew=(linklist)malloc(sizeof(Node));
 		pnew->data=num;
 		pnew->next=p->next;
 		p->next=pnew;
